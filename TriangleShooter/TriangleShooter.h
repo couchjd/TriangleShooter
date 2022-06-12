@@ -2,7 +2,6 @@
 #define _USE_MATH_DEFINES
 
 #include "Projectile.h"
-#include "Allocator.h"
 
 #include <math.h>
 #include <iostream>
@@ -22,7 +21,6 @@ public:
 	std::vector<Projectile*> projectiles;
 	Projectile* projectile = new Projectile();
 	Projectile* newProj;
-	Allocator alloc;
 	void run();
 
 private:

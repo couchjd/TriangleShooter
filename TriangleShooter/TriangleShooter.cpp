@@ -1,8 +1,8 @@
 #include "TriangleShooter.h"
 
 TriangleShooter::TriangleShooter() :
-	window(sf::VideoMode(800, 600), "Shooter"),
-	alloc(sizeof(Projectile), 1024, 8) {
+   window(sf::VideoMode(800, 600), "Shooter")
+{
 }
 
 void TriangleShooter::run() {
@@ -148,7 +148,6 @@ void TriangleShooter::drawProjectiles() {
 		window.draw(*projectiles[x]);
 		projectiles[x]->update();
 		if(outOfBounds(*projectiles[x])) {
-			alloc.Free(projectiles[x]);
 			projectiles.erase(projectiles.begin() + x);
 		}
 	}
